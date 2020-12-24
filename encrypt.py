@@ -131,6 +131,7 @@ des_enc = TripleDES_Encryption(des_key)
 #encrypt file using 3DES
 des_enc.encrypt_file(file_name+".enc")
 
+#RSA
 rsa_message = des_key + aes_key
 rsa_pvt_key = RSA.generate(1024)
 rsa_pub_key = rsa_pvt_key.publickey()
