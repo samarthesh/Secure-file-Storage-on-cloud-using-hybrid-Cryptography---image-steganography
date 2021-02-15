@@ -1,5 +1,5 @@
 #import needed libraries
-from Crypto import Random
+from Cryptodome.Cipher import Random 
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES
 from Crypto.Cipher import DES3
@@ -145,5 +145,5 @@ a=random.choice(os.listdir(folder))
 file = folder+'\\'+a
 im = Image.open(file)
 im1 = stepic.encode(im, rsa_pvt_key.export_key() + ciphertext)
-im1.save("C:\xampp\htdocs\secure\images\keyImage.png", "PNG")
+im1.save(r"C:\xampp\htdocs\secure\images\keyImage.png","PNG")
 print("LSB successfull")

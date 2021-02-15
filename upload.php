@@ -25,7 +25,13 @@ if (isset($_POST['submit'])) {
         $my_command = escapeshellcmd("python C:/xampp/htdocs/secure/encrypt.py C:/xampp/htdocs/secure/uploads/" .$fileName);
         $command_output = shell_exec($my_command);
         echo $command_output;
+
+        $my_command2 = escapeshellcmd("python C:/xampp/htdocs/secure/spiltjoin/spiltjoin.py spilt --C:/xampp/htdocs/secure/uploads/" .$fileName);
+        $command_output2 = shell_exec($my_command2);
+
+
 		  	header("Location: downloadkey.php");
+        
    		}
 	    else {
         echo "error in size";
